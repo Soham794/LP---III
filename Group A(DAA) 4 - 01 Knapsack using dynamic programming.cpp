@@ -85,21 +85,7 @@ int main(){
 		}
 	}
 
-	cout << dp[n][mx_weight];
-
-	// Space Optimized approach
-	// Space Compelxity : O(max_weight)
-	// Auxiliary Space Complexity : O(max_weight) // dp table
-	// vector<int> dp1(mx_weight+1, 0);
-	// for(int i=1;i<=n;i++){
-	// 	for(int w=mx_weight;w>=0;w--){
-	// 		if(items[i-1].first <= w){
-	// 			dp1[w] = max(dp1[w], dp1[w-items[i-1].first]+items[i-1].second);
-	// 		}
-	// 	}
-	// }
-
-	// cout << dp1[mx_weight];
+	cout << "The maximum profit obtained is: " << dp[n][mx_weight] << nline;
 
 
 return 0;
