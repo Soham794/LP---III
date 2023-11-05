@@ -27,7 +27,6 @@ typedef long double lld;
 // Time Complexity : O(N*W)
 // Space Complexity : O(N)
 // Auxiliary Space Complexity : O(N*W) // dp table
-
 int knapsack01(vector<vector<int>> &dp, vector<pair<int,int>> &items, int curr, int weight, int profit){
 	
 	
