@@ -30,7 +30,7 @@ typedef long double lld;
 
 int knapsack01(vector<vector<int>> &dp, vector<pair<int,int>> &items, int curr, int weight, int profit){
 	
-	// if(weight == 0 || curr == 0) return 0;
+	
 	if(curr < 0) return 0;
 
 	if(dp[curr][weight] != -1) return dp[curr][weight];

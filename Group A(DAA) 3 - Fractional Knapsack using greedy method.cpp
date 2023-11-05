@@ -19,6 +19,12 @@ typedef long long int ll;
 typedef unsigned long long ull;
 typedef long double lld;
 
+bool compare(pair<int,int> a, pair<int,int> b){
+	double profit_weight1 = (double)a.second/(double)a.first;
+	double profit_weight2 = (double)b.second/(double)b.first;
+	if(profit_weight2 == profit_weight1) return a.first < b.first;
+	return profit_weight1 > profit_weight2;
+}
 
 int main(){	
 
@@ -45,12 +51,7 @@ int main(){
 	for(int i=0;i<n;i++) cin >> items[i].second;
 	cout << nline;
 
-	sort(items.begin(), items.end(), [&](auto &a, auto &b){
-		double profit_weight1 = (double)a.second/(double)a.first;
-		double profit_weight2 = (double)b.second/(double)b.first;
-		if(profit_weight2 == profit_weight1) return a.first < b.first;
-		return profit_weight1 > profit_weight2;
-	});
+	sort(items.begin(), items.end(), compare);
 
 	for(int i=0;i<n;i++){
 		cout << items[i].first << " " << items[i].second << nline;
