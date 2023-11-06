@@ -42,7 +42,6 @@ int knapsack01(vector<vector<int>> &dp, vector<pair<int,int>> &items, int curr, 
 }
 
 
-
 int main(){	
 
 	// Non-Recursive method using Tabulation (Bottom-Up approach)
